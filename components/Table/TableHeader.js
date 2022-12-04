@@ -17,3 +17,11 @@ export default function TableHeader({ color, headerName }) {
     </>
   );
 }
+
+TableHeader.defaultProps = {
+  color: 'light',
+};
+
+TableHeader.propTypes = {
+  color: PropTypes.oneOf(['light', 'dark']),
+};

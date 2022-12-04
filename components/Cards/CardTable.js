@@ -2,25 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // components
-
-import TableDropdown from 'components/Dropdowns/TableDropdown.js';
 import TableHeader from 'components/Table/TableHeader.js';
 import TableBody from 'components/Table/TableBody';
+import TableBodyline from 'components/Table/TableBodyline';
 
 export default function CardTable({ color, title, header, body }) {
-  const a = '會員資料';
-  const b = [
-    'UID',
-    '會員名稱',
-    '電郵',
-    'ERC20地址',
-    '資產價值 (USD)',
-    '推薦序號',
-    '推薦人ID',
-    '推薦人數',
-    '註冊時間',
-  ];
-  const c = [];
+  const listOfHeader = header.map((th) => (
+    <TableHeader color={color} headerName={th} />
+  ));
+
+  const listOfBody = body.map((b) => <TableBody data={b} />);
   return (
     <>
       <div
@@ -38,7 +29,7 @@ export default function CardTable({ color, title, header, body }) {
                   (color === 'light' ? 'text-blueGray-700' : 'text-white')
                 }
               >
-                {a}
+                {title}
               </h3>
             </div>
           </div>
@@ -48,23 +39,12 @@ export default function CardTable({ color, title, header, body }) {
           <table className="items-center w-full bg-transparent border-collapse">
             <thead>
               <tr>
-                <TableHeader color={color} headerName={b[0]} />
-                <TableHeader color={color} headerName={b[1]} />
-                <TableHeader color={color} headerName={b[2]} />
-                <TableHeader color={color} headerName={b[3]} />
-                <TableHeader color={color} headerName={b[4]} />
-                <TableHeader color={color} headerName={b[5]} />
-                <TableHeader color={color} headerName={b[6]} />
-                <TableHeader color={color} headerName={b[7]} />
-                <TableHeader color={color} headerName={b[8]} />
+                {listOfHeader}
+                <TableHeader color={color} headerName="Action" />
               </tr>
             </thead>
 
-            <tbody>
-              <tr>
-                <TableBody data={b}></TableBody>
-              </tr>
-            </tbody>
+            <tbody>{listOfBody}</tbody>
           </table>
         </div>
       </div>
