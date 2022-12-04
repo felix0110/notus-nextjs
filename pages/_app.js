@@ -31,16 +31,16 @@ export default class MyApp extends App {
     let comment = document.createComment(`
 
 =========================================================
-* Testing - v1.1.0 based on Tailwind Starter Kit by Creative Tim
+* Testing - v1.1.0 based on Tailwind Starter Kit by Felix Wong
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/notus-nextjs
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2021 Felix Wong (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/notus-nextjs/blob/main/LICENSE.md)
 
 * Tailwind Starter Kit Page: https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation
 
-* Coded by Creative Tim
+* Coded by Felix Wong
 
 =========================================================
 
@@ -70,7 +70,7 @@ export default class MyApp extends App {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <title>Testing by Creative Tim</title>
+          <title>Testing by Felix Wong</title>
           <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
         </Head>
         <Layout>

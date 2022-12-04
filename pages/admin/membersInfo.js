@@ -8,7 +8,7 @@ import CardTable from 'components/Cards/CardTable.js';
 
 import Admin from 'layouts/Admin.js';
 
-export default function Tables() {
+export default function MembersInfo() {
   const header = [
     'UID',
     '會員名稱',
@@ -57,4 +57,4 @@ export default function Tables() {
   );
 }
 
-Tables.layout = Admin;
+MembersInfo.layout = Admin;

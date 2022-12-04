@@ -2,12 +2,12 @@
   "name": "notus-nextjs",
   "homepage": "https://demos.creative-tim.com/notus-nextjs",
   "version": "1.1.0",
-  "description": "Testing - A free Tailwind CSS, NextJS and React Ui Kit and Admin by Creative Tim.",
+  "description": "Testing - A free Tailwind CSS, NextJS and React Ui Kit and Admin by Felix Wong.",
   "repository": "https://github.com/creativetimofficial/notus-nextjs",
   "license": "MIT",
-   "engines" : { 
-    "npm" : ">=7.0.0",
-    "node" : ">=16.0.0"
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.3",
