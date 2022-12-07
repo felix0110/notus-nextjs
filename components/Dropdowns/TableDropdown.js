@@ -1,15 +1,24 @@
 import React from "react";
 import { createPopper } from "@popperjs/core";
+import Modal from "../Modal/Modal";
 
 const NotificationDropdown = () => {
   // dropdown props
   const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
+  const [currentShow, setCurrentShow] = React.useState("");
   const btnDropdownRef = React.createRef();
   const popoverDropdownRef = React.createRef();
+  const childRef = React.useRef();
+
   const openDropdownPopover = () => {
-    createPopper(btnDropdownRef.current, popoverDropdownRef.current, {
-      placement: "left-start",
-    });
+    const test = createPopper(
+      btnDropdownRef.current,
+      popoverDropdownRef.current,
+      {
+        placement: "left-start",
+        strategy: "fixed",
+      }
+    );
     setDropdownPopoverShow(true);
   };
   const closeDropdownPopover = () => {
@@ -53,15 +62,7 @@ const NotificationDropdown = () => {
         >
           Another action
         </a>
-        <a
-          href="#pablo"
-          className={
-            "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-          }
-          onClick={(e) => e.preventDefault()}
-        >
-          Something else here
-        </a>
+        
       </div>
     </>
   );
